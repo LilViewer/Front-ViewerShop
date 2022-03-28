@@ -1,0 +1,41 @@
+@import "./../../varibles.module";
+@import "./../../style.module";
+
+.prevTovar{
+  height: 100%;
+  position: relative;
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+  width: 220px;
+  padding-bottom: 40px;
+  cursor: pointer;
+
+  &__blockInfoTovar{
+    padding: 5px;
+    min-height: auto;
+  }
+  &__blockShadow{
+    width: 100%;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(0, 0, 0), rgba(9, 32, 187, 0));
+    position: absolute;
+    height: 20px;
+    margin-top: -20px;
+  }
+}
+.prevTovar:hover{
+  backdrop-filter: blur(12px);
+  border: 2px solid $colorGrean;
+
+}
+.prevTovar:hover *{
+  visibility: visible;
+
+}
+.borderButtonActivated{
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+}

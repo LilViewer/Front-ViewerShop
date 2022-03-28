@@ -1,0 +1,86 @@
+@import "./varibles.module.scss";
+button{
+  cursor: pointer;
+}
+@font-face {
+  font-family: 'Ajar Sansr';
+  src: local('Ajar Sansr'), url("Content/Font-Famali/Ajar Sans.zip") format('ttf');
+}
+.colorP{
+  color: $colorGrean;
+}
+body{
+  background: $colorBlack;
+  position: relative;
+}
+.line{
+  outline: 1px solid $ColorGrey;
+}
+.discount{
+  border: 2px solid white;
+  color: black;
+  background: $colorGrean;
+  border-radius: 12px;
+  text-align: center;
+  padding: 5px;
+}
+.border{
+  border:2px solid $colorWhite;
+  border-radius: 12px;
+  color: $colorWhite;
+  text-align: center;
+  background: rgba(0,0,0,0)
+}
+.border:hover{
+  color: $colorBlack;
+  background-color: $colorGrean;
+}
+
+.borderButtonActivated{
+  border:2px solid $colorWhite;
+  border-radius: 12px;
+  color: $colorBlack;
+  text-align: center;
+  padding: 5px;
+  background: $colorGrean
+}
+.borderButtonActivated:hover{
+  background: $colorGreanAct
+}
+
+*{
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Ajar Sansr";
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.main{
+  height: 100vh;
+  color: $colorWhite;
+  &__navigation{
+    width: 20%;
+  }
+  &__header{
+    width: 100%;
+  }
+  &__block{
+    margin-top: $PaddingTop;
+    margin-right: $PaddingRight;
+    margin-left: $PaddingLeft;
+
+  }
+
+}
+
+.tovarsVetrina{
+  justify-items: center;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(5,1fr);
+  margin: 0px 40px;
+}
+

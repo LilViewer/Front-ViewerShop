@@ -1,0 +1,30 @@
+@import "../../../varibles.module";
+.Border{
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+}
+textarea {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+  padding: 2px 8px;
+  outline: none;
+  color: $colorWhite;
+}
+
+.Ocenka{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  &__star{
+    display: flex;
+  }
+
+
+  p{
+    cursor: pointer;
+  }
+}
+button{
+  padding: 4px;
+}

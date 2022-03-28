@@ -1,0 +1,18 @@
+@import "../../../varibles.module";
+
+
+.TovarBlock{
+  position: relative;
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+
+  &__Info{
+    padding: 2px 5px;
+  }
+
+  &__btn{
+    position: absolute;
+    right: 1vw;
+    top: 0.7vh;
+  }
+}

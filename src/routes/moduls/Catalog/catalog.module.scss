@@ -1,0 +1,46 @@
+@import "./src/varibles.module";
+.blockCatalog{
+  position: relative;
+  display: grid;
+  grid-gap: 0.5vw;
+  width: 100vw;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+
+  h3{
+    color: $ColorGreyWhite;
+  }
+
+  a{
+    display: flex;
+    width: 100%;
+  }
+
+
+  &__personal{
+
+    div{
+      display: grid;
+      grid-row-gap: 2vh;
+
+    }
+
+    &__twoblock{
+      color: $ColorGreyWhite;
+      padding-top: 32.5vh;
+    }
+  }
+  &__genre, &__publisher, &__developer{
+    display: grid;
+    grid-row-gap: 2vh;
+
+    &__next{
+      color: $colorGrean;
+    }
+  }
+  &__genres{
+    display: grid;
+    grid-row-gap: 2vh;
+  }
+
+}

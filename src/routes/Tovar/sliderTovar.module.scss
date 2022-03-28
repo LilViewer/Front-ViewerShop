@@ -1,0 +1,33 @@
+@import "../../varibles.module";
+@import '../../style.module';
+
+.SliderBlock{
+  z-index: 20;
+  //height: 40%;
+  top: 25vh;
+  position: absolute;
+  width: 30vw;
+  left: 120px;
+}
+
+.Keys{
+
+  display: flex;
+
+  div:nth-child(even){
+    margin-left: 50px;
+  }
+
+  &__Stock{
+    display: flex;
+  }
+
+  &__Circle{
+    margin-right: 5px;
+    margin-top: 2px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    border: 2px solid $colorWhite;
+  }
+}

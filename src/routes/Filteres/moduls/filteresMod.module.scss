@@ -1,0 +1,138 @@
+@import "../../../varibles.module";
+
+
+.FilterMenu{
+  display: grid;
+
+  grid-template-columns: repeat(5,1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+
+}
+.dropdown_btn_dop{
+  display: flex;
+  position: absolute;
+  right: 6px;
+  p:nth-child(1){
+    padding-right: 10px;
+  }
+
+  .dropdown_btn_dop_cross{
+    margin-top: -3px;
+  }
+}
+
+.dropdown_item_conteiner_switch{
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  margin-top: 2px;
+}
+
+.dropdown_item_conteiner_switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.dropdown_item_slider{
+  position: absolute;
+  cursor: pointer;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+.dropdown_item_slider:before{
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 12px;
+  background-color: $ColorGrey;
+  transition: 0.4s ;
+}
+
+input:checked + .dropdown_item_slider:before{
+  transform: translateX(18px);
+  background-color: $colorGrean;
+}
+.dropdown{
+  position: relative;
+  color: $colorWhite;
+  cursor: pointer;
+
+}
+.dropdown_border{
+  margin-left: -1%;
+  width: 102%;
+  position: absolute;
+  border-radius: 12px;
+  border: 1px solid $colorWhite;
+}
+.dropdown_content::-webkit-scrollbar{
+  width: 4px;
+  position: absolute;
+  right: 5px;
+  z-index: 3;
+}
+.dropdown_content::-webkit-scrollbar-thumb{
+  height: 8px;
+  border-radius: 2px;
+  background-color: $ColorGrey;
+  width: 4px;
+}
+.dropdown_btn {
+  font-weight: bold;
+  padding: 4px 6px;
+  display: flex;
+  cursor: pointer;
+
+  b{
+    color: $colorGrean;
+    margin-left: 4px;
+  }
+
+}
+
+.line{
+  outline: 1px solid $ColorGrey;
+  margin: 0px 10px 0px 6px;
+}
+.dropdown_content{
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  margin: 3px 0px 0px 0px;
+  background: $colorBlack;
+  //overflow-y: scroll;
+}
+
+
+.dropdown_item{
+  display: flex;
+  width: 100%;
+  padding: 2px 6px;
+
+  label{
+    min-width: 30px;
+  }
+
+  input{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    outline: none;
+    color: $colorWhite;
+    width: 98%;
+  }
+
+  p{
+    margin-left: 4px;
+  }
+}
+

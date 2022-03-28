@@ -1,0 +1,129 @@
+@import "../../varibles.module";
+b{
+  color: $colorGrean;
+}
+Link{
+
+
+}
+.Description{
+  font-size: 20px;
+}
+.BlockTovar{
+  padding-bottom: 10vh;
+  margin-top: 10vh;
+  margin-right: $PaddingRight;
+  margin-left: $PaddingLeft;
+  display: grid;
+  grid-template-columns: 10fr 1fr 11fr;
+
+  &__Report{
+    margin-top: 10px;
+    margin-left: $PaddingLeft;
+    width: 56%;
+
+    &__Head{
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      &__names{
+        p{
+          font-size: 10px;
+          color: $ColorGrey;
+        }
+        b{
+          font-size: 20px;
+        }
+      }
+
+      &__like{
+        display: flex;
+        position: absolute;
+        right: 10px;
+        p{
+          margin-top: 5px;
+        }
+        img:nth-child(4){
+          margin-top: 5px;
+        }
+        img{
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &__Comment{
+      margin-top: 10px;
+      padding-bottom: 10px;
+      display: block;
+    }
+    &__Block{
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 60px;
+      .avatar{
+        left: 0;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__Sistem{
+    margin-right: $PaddingRight;
+    margin-left: $PaddingLeft;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 17fr  11fr;
+  }
+
+  &__Line{
+    border: 2px solid $colorWhite;
+    border-radius: 12px;
+    width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__Trailer{
+
+    &__Info{
+      margin-top: 5vh;
+
+
+    }
+
+    &__InfoStatick{
+    }
+    &__InfoDinamic{
+      outline: 1px solid red;
+      z-index: 1000;
+      height: 200px;
+    }
+
+    &__Film{
+      border: 2px solid $colorWhite;
+      border-radius: 12px;
+
+      *{
+        border-radius: 12px;
+      }
+    }
+  }
+}
+.Border{
+  display: inline-block;
+  position: relative;
+  margin-bottom: 3vh;
+  border: 2px solid $colorWhite;
+  color: $colorWhite;
+  padding: 5px;
+  background: rgba(0,0,0,0);
+  border-radius: 12px;
+  text-align: center;
+}

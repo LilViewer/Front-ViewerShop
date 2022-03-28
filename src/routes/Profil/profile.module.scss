@@ -1,0 +1,301 @@
+@import "../../varibles.module";
+.border{
+  padding: 5px;
+  border-radius: 12px;
+}
+.line{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.block{
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-column-gap: 20px;
+  padding-left: $PaddingLeft;
+  padding-right: $PaddingRight;
+  padding-top: $PaddingTop;
+
+  &__Four{
+    border: 2px solid $colorWhite;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+
+    &__Avatar{
+      position: relative;
+      display: flex;
+      width: 50%;
+
+      &__spisock{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 6px;
+
+        div{
+          margin-top: 10px;
+          img{
+            border-radius: 50%;
+            border: 2px solid $colorWhite;
+            width: 80px;
+            height: 80px;
+          }
+          img:hover{
+            border: 2px solid $colorGrean;
+          }
+        }
+
+      }
+      div{
+        text-align: center;
+        width: 100%;
+      }
+
+      &__personal{
+        position: absolute;
+        left: -200px;
+        top: 60px;
+        width: 120px;
+        height: 120px;
+      }
+
+    }
+
+    &__ProfData{
+      width: 50%;
+      &__Save{
+        display: flex;
+
+        p{
+          font-size: 12px;
+          color: $ColorGrey;
+          text-align: center;
+        }
+      }
+
+      &__LocPas{
+        margin-bottom: 10px;
+
+        h2{
+          font-size: 20px;
+        }
+
+        div:nth-child(1n+1){
+          margin-top: 16px;
+        }
+      }
+      &__int{
+        display: flex;
+        p{
+          width: 80px;
+        }
+        input{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__Three{
+    &__Tovar{
+      display: flex;
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+
+
+
+      &__image{
+        height: 100%;
+        position: relative;
+        border: 2px solid $colorWhite;
+        border-radius: 12px;
+        width: 220px;
+        cursor: pointer;
+      }
+      &__image:hover{
+        border: 2px solid $colorGrean;
+      }
+
+      &__Info{
+        position: relative;
+        margin-left: 20px;
+        width: 81%;
+
+        &__description{
+          margin-top: 60px;
+          display: block;
+          top: 100px;
+          p{
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 13;
+            -webkit-box-orient: vertical;
+          }
+          p:focus{
+            height: auto;
+            display: block;
+            cursor: pointer;
+          }
+        }
+
+        &__name{
+          margin-top: 30px;
+          font-size: 30px;
+          position: absolute;
+        }
+        &__head{
+          display: flex;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 10px;
+          position: relative;
+
+          div:nth-child(3){
+            position: absolute;
+            right: 10px;
+          }
+        }
+
+
+      }
+
+
+    }
+  }
+
+  &__TwoTwo{
+    margin-top: 100px;
+    &__main{
+      margin-top: 20px;
+      display: grid;
+      margin-left: 40px;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 20px;
+
+    }
+
+    &__header{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+
+  &__Two{
+    border: 2px solid $colorWhite;
+    border-radius: 12px;
+    padding: 20px;
+
+    &__Statictick{
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: relative;
+      margin-bottom: 30px;
+      div{
+        position: relative;
+        b{
+          position: absolute;
+          width: 20px;
+          text-align: center;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+        p{
+          padding-top: 20px;
+          text-align: center;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+
+    &__Names{
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      height: 80px;
+      div{
+        position: absolute;
+        width: 80%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      p,b{
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: -40px;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+      p{
+        font-size: 30px;
+      }
+      b{
+        top: 28px;
+      }
+    }
+
+    &__head{
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-column-gap: 10px;
+
+        &__Raiting{
+          *{
+            display: block;
+          }
+        }
+
+        &__Avatar{
+          position: relative;
+          img{
+            top: -60px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+          }
+          &__circle{
+            top: -12px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            border: 2px solid $colorWhite;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background: $colorGrean;
+            color: black;
+            font-size: 22px;
+            text-align: center;
+          }
+        }
+    }
+  }
+
+  &__One{
+
+    div{
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+  }
+}

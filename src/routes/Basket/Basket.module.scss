@@ -1,0 +1,197 @@
+@import "../../varibles.module";
+.prevTovar{
+  height: 100%;
+  position: relative;
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+  width: 220px;
+  cursor: pointer;
+}
+.prevTovar:hover{
+  border: 2px solid $colorGrean;
+
+}
+.MainBlock{
+  display: flex;
+  margin-top: 130px;
+  padding-left: $PaddingLeft;
+  padding-right: $PaddingRight;
+
+  &__Basket{
+    width: 75vw;
+
+    &__Tovarinfo{
+      position: relative;
+
+      //div:nth-child(5){
+      //  position: relative;
+      //  bottom: -10px;
+      //  outline: 1px solid red;
+      //}
+      &__Description{
+
+        &__desc{
+          height: auto;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 10;
+          -webkit-box-orient: vertical;
+        }
+        &__desc:focus{
+          height: auto;
+          display: block;
+          cursor: pointer;
+        }
+      }
+
+      &__DopInfo{
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        grid-column-gap: 10px;
+
+        &__Reg,&__Act{
+          //outline: 1px solid blue;
+          //display: flex;
+
+          p{
+            float: left;
+          }
+          div:nth-child(2n){
+            outline: 1px solid red;
+            display: inline-grid;
+          }
+        }
+      }
+      &__CrossName{
+        display: flex;
+        justify-content: space-between;
+
+        p{
+          font-size: 26px;
+        }
+      }
+      &__Price{
+        display: inline-flex;
+        margin-bottom: 20px;
+        p:nth-child(2n+1){
+          //outline: 1px solid red;
+          margin-left: 15px;
+        }
+        p:nth-child(2n){
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        p{
+          left: 0;
+          margin-left: auto;
+        }
+
+        &__DisPrice{
+          color: $ColorGrey;
+          text-decoration: line-through;
+        }
+      }
+      &__Discount{
+        border: 2px solid $colorWhite;
+        color: $colorBlack;
+        background: $colorGrean;
+        border-radius: 12px;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+    &__Tovar{
+      display: flex;
+      grid-template-columns: 1fr 20fr;
+      grid-column-gap: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &__Header{
+      display: flex;
+
+      p{
+        margin-top: -8px;
+        padding-left: 6px;
+        font-size: 26px;
+      }
+    }
+  }
+  &__Cupon{
+    //outline: 1px solid red;
+    width: 25vw;
+
+    b{
+
+      font-size: 26px;
+    }
+  }
+
+}
+.cupon{
+  margin-left: 50px;
+  padding: 12px;
+  border: 2px solid $colorWhite;
+  border-radius: 12px;
+  position: relative;
+
+
+  &__goodness{
+    margin-top: 10px;
+    cursor: pointer;
+    label{
+      margin-right: 5px;
+      margin-top: 6px;
+      float: left;
+    }
+    p{
+      b{
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__input{
+
+    margin-top: 20px;
+
+    input{
+      border-radius: 0px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      outline: none;
+    }
+
+  }
+
+  &__Switch{
+    margin-top: 10px;
+    display: flex;
+
+    p{
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}
+.BuyBlock{
+  position: relative;
+  margin-top: 20px;
+
+  &__Buy{
+    display: inline-flex;
+    //top: 20px;
+
+    padding: 5px;
+  }
+}
+.dopInfo{
+  margin-top: 20px;
+  b{
+    font-size: 20px;
+  }
+}

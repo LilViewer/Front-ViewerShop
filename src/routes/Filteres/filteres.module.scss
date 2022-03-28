@@ -1,0 +1,97 @@
+@import "../../varibles.module";
+
+.FilterMenu_Two{
+  margin-top: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr) ;
+  grid-column-gap: 20px;
+
+
+}
+.Filterblock{
+  margin-bottom: 4%;
+}
+.btn_act{
+  background-color: $colorGrean;
+  color: $colorBlack;
+}
+.FilterMenu{
+  display: grid;
+  grid-template-columns: repeat(4,1fr) ;
+  grid-column-gap: 20px;
+
+
+
+  &__block{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-around;
+
+
+
+    &__available{
+      display: flex;
+      label{
+
+        height: 12px;
+        margin-top: 12px;
+      }
+      p{
+        width: 80%;
+      }
+    }
+    &__clear, &__allFilters{
+      padding: 10px 2px;
+    }
+    &__clear:hover{
+
+    }
+  }
+}
+.dropdown{
+  position: relative;
+  color: $colorWhite;
+  cursor: pointer;
+}
+.dropdown_border{
+  margin-left: -1%;
+  width: 102%;
+  position: absolute;
+  border-radius: 12px;
+  border: 1px solid $colorWhite;
+}
+.dropdown_btn {
+
+  font-weight: bold;
+  padding: 4px 6px;
+  display: flex;
+  cursor: pointer;
+
+
+  p{
+    position: absolute;
+    right: 6px;
+  }
+}
+
+.line{
+  outline: 1px solid $ColorGrey;
+  margin: 0px 10px 0px 6px;
+}
+.dropdown_content{
+  max-height: 100px;
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  padding: 4px 0px;
+  background: $colorBlack;
+
+}
+
+
+.dropdown_item{
+  width: 100%;
+  padding: 2px 6px;
+}

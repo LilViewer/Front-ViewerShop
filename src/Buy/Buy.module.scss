@@ -1,0 +1,56 @@
+@import "../varibles.module";
+
+.main{
+
+
+
+  &__block{
+    padding: 20px;
+    border: 2px solid $colorWhite;
+    border-radius: 12px;
+    width: 40vw;
+    max-height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    &__buy{
+      margin-top: 10px;
+      margin-left: 5px;
+    }
+
+    &__price{
+      margin-left: 5px;
+
+      b{
+        font-size: 20px;
+      }
+    }
+
+    &__card{
+
+      &__number{
+        margin-left: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        input{
+          width: 100%;
+        }
+      }
+
+      &__srock{
+        display: flex;
+
+        input{
+          margin-left: 5px;
+          margin-right: 5px;
+          width: 60px;
+        }
+      }
+    }
+  }
+}
