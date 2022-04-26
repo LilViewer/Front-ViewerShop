@@ -31,7 +31,7 @@ let Filteres = (props) =>{
 
     const [selectedGenreArray, setSelectedGenreArray] =  useState(propse[2]=='Genre'?[propse[3]]:[]);
     const ArrayGenre = stateData.genres.map(el=>el.name)
-
+    console.log(selectedGenreArray,ArrayGenre)
     const [selectedPublishersArray, setSelectedPublishersArray] =  useState(propse[2]=='Publisher'?[propse[3]]:[]);
     const ArrayPublishers = stateData.publishers.map(el=>el.name)
 
@@ -58,7 +58,7 @@ let Filteres = (props) =>{
                     <FilterMenu selected={selectedClassic} setSelected={setSelectedClassic} options={stateData.FilterMenuClassic} ></FilterMenu>
                     {/*//Убрать избраное и доделать сортировку*/}
                     {/*<FilterMenuMod  selected={'Издатель:'} selecteds={selectedPublishersArray}  setSelected={setSelectedPublishersArray} options={ArrayPublishers} />*/}
-                    <FilterMenuMod  selected={'Жанры:'} selecteds={selectedGenreArray}  setSelected={setSelectedGenreArray} options={ArrayGenre}     ></FilterMenuMod>
+                    <FilterMenuMod  selected={'Жанры:'} selecteds={selectedGenreArray}  setSelected={setSelectedGenreArray} options={ArrayGenre}/>
                     <FilterMenu  selected={selectedPrice} setSelected={setSelectedPrice} options={stateData.FilterMenuPrice} ></FilterMenu>
                     <div className={classesTwo.FilterMenu__block}>
                             <div className={classesTwo.FilterMenu__block__available}  onClick={(e)=>setIsToggled(!isToggled)}>

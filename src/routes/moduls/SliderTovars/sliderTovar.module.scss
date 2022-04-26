@@ -25,7 +25,7 @@ a{
     height: 10%;
     width: 100%;
     position: absolute;
-    bottom: -23%;
+    bottom: -5px;
     background: linear-gradient(0deg, rgba(0, 0, 0,1),rgba(0, 0, 0,.6), rgba(0, 0, 0, 0));
     z-index: 100;
   }
@@ -82,22 +82,7 @@ a{
 
 
 
-  &__lines{
-    top: 20%;
-    outline: 4px solid $colorWhite;
-    height: 25vh;
-    left: 4.3vw;
-    position: absolute;
-    z-index: 100;
-  }
 
-  &__line{
-    outline: 6px solid $colorGrean;
-    height:  16.6666666667%;
-    position: absolute;
-    transition: top 1s;
-    z-index: 100;
-  }
 
   &__track{
     transition: all .6s;
@@ -115,26 +100,41 @@ a{
     position: relative;
 
 
-    &:nth-child(even){
-      background-color: red;
-    }
   }
 
   &__buttonBlock{
-    margin-top: -26%;
-    position: relative;
-    height: 40vh;
-    margin-bottom: 10%;
+    width: 40px;
+    margin-left: 50px;
+    top: 25%;
+    position: absolute;
+    z-index: 100;
+
+
+  }
+  &__lines{
+    outline: 4px solid $colorWhite;
+    height: 26vh;
+    width: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
   }
 
+  &__line{
+    outline: 6px solid $colorGrean;
+    position: relative;
+    height: 16.6667%;
+    top: 0;
+    transition: top 1s;
+    z-index: 100;
+  }
   &__button{
     border: none;
     //outline: 1px solid red;
     background: none;
     width: 40px;
     height: 40px;
-    left: 2.9vw;
-    position: absolute;
     cursor: pointer;
     z-index: 100;
 
@@ -145,15 +145,14 @@ a{
     }
 
     &__prev{
+      margin-bottom: 10px;
       background: url('../../../Content/image_site/strike.png') 0 0 repeat ;
       transform: rotate(180deg);
-      top: 0;
     }
     &__next{
+      margin-top: 10px;
       background: url('../../../Content/image_site/strike.png') 0 0 repeat ;
       transform: rotate(0deg);
-      display: block;
-      bottom: -10px;
     }
   }
 

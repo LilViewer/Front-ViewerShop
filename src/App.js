@@ -20,7 +20,6 @@ import Buy from "./Buy/Buy";
 
 function App() {
   const [stateData, dispatchData] = React.useReducer(ReducerData, StateData)
-  window.token = 0;
   return (
     <Switch>
       <ContextData.Provider value={{stateData, dispatchData}}>
@@ -33,8 +32,6 @@ function App() {
         <Route path='/Profil'  component={Profil} />
         <Route path='/Tovar/:tovarid'  component={Tovar} />
         <Route path='/Test'  component={Test} />
-        {/*<Route path='/Genre/:genreId'  component={Filteres} />*/}
-        {/*<Route path='/Filter'  component={Filteres}  />*/}
         <Route path='/Filter/Genre/:GenreTovars' component={Filteres} />
         <Route path='/Filter/Developer/:DeveloperTovars' component={Filteres} />
         <Route path='/Filter/Publisher/:PublisherTovars' component={Filteres} />

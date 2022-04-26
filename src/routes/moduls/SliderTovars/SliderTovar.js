@@ -32,7 +32,6 @@ const SliderTovar = ({NameTovar}) =>{
         //возвращение к началу слайдера после полной прокрутки
         if(step+1 === i.length){
             step=0
-
             //появление сверху 1-го слайда
             slider.current.childNodes[step].style = `transform: translateY(+${step}vh); z-index:2`
             console.log(slider.current.childNodes[step].childNodes[1])
@@ -149,6 +148,7 @@ const SliderTovar = ({NameTovar}) =>{
         let lines = document.getElementsByClassName(classes.SliderBlock__line)[0]
         setTimeout(function (){
             lines.style.top = `${(step+2)*height - height}%`
+            console.log(lines.style.top)
         }, 3600)
     }
 
@@ -160,7 +160,15 @@ const SliderTovar = ({NameTovar}) =>{
     let i = [1,2,3,4,5,6];
     return(
         <div className={classes.SliderBlock}>
+            <div className={classes.SliderBlock__buttonBlock}>
+                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__prev)} ref={btnPrev} onClick={prevHendler} />
+                <div className={classes.SliderBlock__lines}>
+                    <div className={classes.SliderBlock__line}></div>
+                </div>
+                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__next)} ref={btnNext} onClick={nextHendler}/>
+            </div>
             <div className={classes.SliderBlock__track} ref={slider}  >
+
                 {i.map((elem,index)=>{
                     return(
                         <div className={classes.SliderBlock__item} >
@@ -170,14 +178,7 @@ const SliderTovar = ({NameTovar}) =>{
                     )
                 })}
             </div>
-            <div className={classes.SliderBlock__buttonBlock}>
-                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__prev)} ref={btnPrev} onClick={prevHendler} />
-                <div className={classes.SliderBlock__lines}>
-                    <div className={classes.SliderBlock__line}></div>
-                </div>
-                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__next)} ref={btnNext} onClick={nextHendler}/>
-                <div className={classes.SliderBlock__shadow}></div>
-            </div>
+            <div className={classes.SliderBlock__shadow}></div>
         </div>
     )
 

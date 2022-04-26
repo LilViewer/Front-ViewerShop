@@ -7,7 +7,7 @@ const TovarReport=({Tovar})=>{
     const Array=[1,2,3,4,5]
     const [isReport,setIsReport]=useState()
     const [count,setCount] = useState(0)
-    const token = document.cookie.split(';')[0]
+    const token = localStorage.getItem('token')
     const addRepotTovar = async () => {
         await fetch(`${NET.APP_URL}/report/add`, {
             method: 'POST',
@@ -21,10 +21,6 @@ const TovarReport=({Tovar})=>{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
-        }).then(function (response) {
-            response.json().then(function (resp) {
-                console.log(resp)
-            })
         })
     }
 

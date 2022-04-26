@@ -13,11 +13,12 @@ import Profils from "./module/Profils";
 import History from "./module/History";
 import ProfData from "./module/ProfData";
 import Footer from "../moduls/Navigation/Footer";
+import Admin from "./module/Admin";
 
 const Profil = () =>{
     const [isUsers,setIsUsers]=useState()
     const {stateData, dispatchData} = React.useContext(ContextData)
-    const token = document.cookie.split(';')[0]
+    const token = localStorage.getItem('token')
     useEffect(()=>{
         const Users = async () => {
             await fetch(`${NET.APP_URL}/users`, {
@@ -40,15 +41,16 @@ const Profil = () =>{
     },[])
 
     const LeaveAkk=()=>{
-        document.cookie ='2'
+        localStorage.removeItem('token')
         // document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
-        console.log(document.cookie)
+        // console.log(document.cookie)
             window.location.href = "/"
     }
 
     const [isProf,setIsProf] = useState(true);
     const [isHistory,setIsHistory] = useState(false);
     const [isProfData,setIsProfData] = useState(false);
+    const [isAdmin,setIsAdmin] = useState(false);
     return(
         <div className={classes.main}>
             <div className={classes.main__header}><Header /></div>
@@ -65,6 +67,7 @@ const Profil = () =>{
                             setIsProf(true)
                             setIsHistory(false)
                             setIsProfData(false)
+                            setIsAdmin(false)
                         }}
                     >
                         Профиль
@@ -80,6 +83,7 @@ const Profil = () =>{
                             setIsProf(false)
                             setIsHistory(true)
                             setIsProfData(false)
+                            setIsAdmin(false)
                         }}
                     >
                         История покупок
@@ -95,10 +99,31 @@ const Profil = () =>{
                             setIsProf(false)
                             setIsHistory(false)
                             setIsProfData(true)
+                            setIsAdmin(false)
                         }}
                     >
                         Личные данные
                     </div>
+                    {
+                        isUsers && isUsers[0][0].api_token==NET.ADMIN_TOKEN?(
+                            <div
+                                className={classesTwo.border}
+                                style={{
+                                    background:isAdmin?`#3FD371`:'',
+                                    color:isAdmin?`#000000`:'',
+                                    border:isAdmin?`2px solid white`:''
+                                }}
+                                onClick={()=>{
+                                    setIsProf(false)
+                                    setIsHistory(false)
+                                    setIsProfData(false)
+                                    setIsAdmin(true)
+                                }}
+                            >
+                                Админ
+                            </div>
+                            ):''
+                    }
                     <div
                         className={classesTwo.border}
                         onClick={()=> {
@@ -116,6 +141,9 @@ const Profil = () =>{
                 }
                 {
                     <ProfData isUsers={isUsers} isProfData={isProfData} />
+                }
+                {
+                    <Admin isAdmin={isAdmin} />
                 }
             </div>
             <Footer />

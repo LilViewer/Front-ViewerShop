@@ -6,6 +6,7 @@ import NewItem from "../../Tovars/moduls/Newitem";
 
 const Profils = ({isUsers,isProf})=>{
     const test = isUsers?isUsers[0][4][0].url:`ProfAvatar/1.svg`
+    // const test = `ProfAvatar/1.svg`
     return(
         isProf &&(
             <div>

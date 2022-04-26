@@ -7,6 +7,14 @@
   border-radius: 12px;
 
   &__Info{
+    *{
+      margin-bottom: 10px;
+    }
+    input{
+      position: absolute;
+      left: 100px;
+      width: 80%;
+    }
     padding: 2px 5px;
   }
 

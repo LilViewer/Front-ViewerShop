@@ -15,9 +15,9 @@ const Footer = ()=>{
         ['Кейсы','']
     ]
     return(
-        <div className={classes.main}>
-            <div className={classesTwo.line} />
+        <div >
             <div className={classes.Block}>
+                <div className={classesTwo.line} />
                 <div className={classes.Block__head}>
                     <Link
                         className={classes.Block__Logo}

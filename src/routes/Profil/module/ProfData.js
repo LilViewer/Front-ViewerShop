@@ -8,7 +8,8 @@ import cn from 'classnames'
 const ProfData = ({isUsers,isProfData}) =>{
     const [isAvatar,setIsAvatar] = useState(false);
     const [isAvatars,setIsAvatars] = useState();
-    const test = isUsers?isUsers[0][4][0].url:`ProfAvatar/1.svg`
+    // const test = isUsers?isUsers[0][4][0].url:`ProfAvatar/1.svg`
+    const test = `ProfAvatar/1.svg`
     const token = isUsers && isUsers[0][0].api_token
     useEffect(()=>{
         const Avatars = async () => {
@@ -27,11 +28,10 @@ const ProfData = ({isUsers,isProfData}) =>{
         }
         Avatars()
     },[])
-    const [isName,setIsName]= useState(isUsers && isUsers[0][0].name)
-    const [isEmail,setIsEmail]= useState(isUsers && isUsers[0][0].email)
+    const [isName,setIsName]= useState()
+    const [isEmail,setIsEmail]= useState()
     const [isPassActual,setIsPassActual]= useState()
     const [isPassNow,setIsPassNow]=useState()
-    console.log(isName)
     const SvapAvatar = async (avatarid) => {
         await fetch(`${NET.APP_URL}/svap/avatar`, {
             method: 'POST',
@@ -43,10 +43,6 @@ const ProfData = ({isUsers,isProfData}) =>{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
-        }).then(function (response) {
-            response.json().then(function (resp) {
-                console.log(resp)
-            })
         })
     }
 

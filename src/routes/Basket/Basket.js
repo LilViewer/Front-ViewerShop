@@ -19,7 +19,7 @@ const Basket = () =>{
     const [isCupon,setIsCupon] = useState()
     const [isCuponState,setIsCuponState] = useState(false)
     const [isGoodness,setIsGoodness] = useState(true)
-    const token = document.cookie.split(';')[0]
+    const token = localStorage.getItem('token')
     const [isArray, setIsArray] = useState();
     React.useEffect(() => {
         const Basket = async () => {

@@ -5,7 +5,7 @@ import cn from 'classnames'
 import NET from "../../network";
 
 const NabvarTovar =({TovarInfo})=>{
-    const token = document.cookie
+    const token = localStorage.getItem('token')
     const addBasket = async ()=>{
         // const response = await fetch(`${NET.APP_URL}/basket/add/${token}/${data.id}`)
         // console.log(response)

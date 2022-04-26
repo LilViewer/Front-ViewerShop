@@ -271,11 +271,19 @@ button{
 .main{
   margin-top: 50px;
 }
+
 .Block{
+  margin-top: 60px;
   padding-top: 10px;
-  margin-left: $PaddingLeft;
-  margin-right: $PaddingRight;
+  padding-left: $PaddingLeft;
+  padding-right: $PaddingRight;
   padding-bottom: 20px;
+
+  div:nth-child(1){
+    left: 0;
+    width: 100%;
+    top: 0;
+  }
 
   &__Description{
     margin-top: 10px;

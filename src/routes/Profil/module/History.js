@@ -37,7 +37,7 @@ const History = ({isHistory,isUsers})=>{
             <div className={classesTwo.block__Three}>
                 {
 
-                    isUsers && isUsers[0][2].map((elem,id)=>{
+                    isUsers && isUsers[0][2]?.map((elem,id)=>{
                         return(
                             <div className={classesTwo.block__Three__Tovar}>
                                 <div
@@ -58,10 +58,10 @@ const History = ({isHistory,isUsers})=>{
                                 <div  className={classesTwo.block__Three__Tovar__Info}>
                                     <div  className={classesTwo.block__Three__Tovar__Info__head}>
                                         <div>
-                                            Ключ: <b>{isUsers[0][3][id].key}</b>
+                                            Ключ: <b>{isUsers[0][3][id]?.key}</b>
                                         </div>
                                         <div>
-                                            Дата: {isUsers[0][3][id].created_at.split(' ')[0]}
+                                            Дата: {isUsers[0][3][id]?.created_at.split(' ')[0]}
                                         </div>
                                         <div>
                                             <p

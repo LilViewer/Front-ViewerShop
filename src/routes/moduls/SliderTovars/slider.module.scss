@@ -80,25 +80,6 @@ a{
 
 
 
-
-
-  &__lines{
-    top: 42%;
-    outline: 4px solid $colorWhite;
-    height: 25vh;
-    left: 40px;
-    position: absolute;
-    z-index: 100;
-  }
-
-  &__line{
-    outline: 6px solid $colorGrean;
-    height:  16.6666666667%;
-    position: absolute;
-    transition: top 1s;
-    z-index: 100;
-  }
-
   &__track{
     transition: all .6s;
     width: 100%;
@@ -121,17 +102,39 @@ a{
   }
 
   &__buttonBlock{
-    height: 20vh;
+    width: 40px;
+    margin-left: 50px;
+    top: 45%;
+    position: absolute;
+    z-index: 100;
+
+
   }
 
+  &__lines{
+    outline: 4px solid $colorWhite;
+    height: 26vh;
+    width: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+  }
+
+  &__line{
+    outline: 6px solid $colorGrean;
+    position: relative;
+    height: 16.6667%;
+    top: 0;
+    transition: top 1s;
+    z-index: 100;
+  }
   &__button{
     border: none;
     //outline: 1px solid red;
     background: none;
     width: 40px;
     height: 40px;
-    left: 20px;
-    position: absolute;
     cursor: pointer;
     z-index: 100;
 
@@ -142,15 +145,14 @@ a{
     }
 
     &__prev{
+      margin-bottom: 10px;
       background: url('../../../Content/image_site/strike.png') 0 0 repeat ;
       transform: rotate(180deg);
-      top: 33%;
     }
     &__next{
+      margin-top: 10px;
       background: url('../../../Content/image_site/strike.png') 0 0 repeat ;
       transform: rotate(0deg);
-      display: block;
-      bottom: 24%;
     }
   }
 

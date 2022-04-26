@@ -3,6 +3,12 @@
   padding: 5px;
   border-radius: 12px;
 }
+.borderBut{
+  cursor: pointer;
+  border: 2px solid $colorWhite;
+  padding: 5px;
+  border-radius: 12px;
+}
 .line{
     position: absolute;
     bottom: 0;
@@ -15,6 +21,154 @@
   padding-left: $PaddingLeft;
   padding-right: $PaddingRight;
   padding-top: $PaddingTop;
+
+  &__Five{
+    padding: 10px;
+
+    &__Tovars{
+      border: 2px solid $colorWhite;
+      border-radius: 12px;
+
+
+      &__Headers{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+      }
+      &__Tovar{
+        padding: 5px 5px 10px 5px;
+
+        &__BottomBlock{
+          padding: 5px 5px 10px 5px;
+
+          &__main{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 10px;
+          }
+
+          &__head{
+            display: flex;
+
+            div{
+              margin-right: 20px;
+            }
+          }
+        }
+
+        &__MainBlock{
+          display: grid;
+          padding: 5px 5px 10px 0px;
+          grid-template-columns: 2fr 3fr;
+          grid-gap: 20px;
+          &__right{
+            img{
+              border: 2px solid $colorWhite;
+              border-radius: 12px;
+              height: 362px;
+              width: 100%;
+            }
+          }
+          &__left{
+            &__slider{
+              height: 206px;
+              width: 100%;
+              border-radius: 12px;
+              border: 2px solid $colorWhite;
+              position: relative;
+              &__upload{
+                position: absolute;
+                outline: 1px solid red;
+                top: 0;
+                right: 0;
+              }
+              &__controller{
+                left: 0;
+                right: 0;
+                margin-top: -20px;
+                z-index: 10000;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                p{
+                  margin: 0 5px;
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 50%;
+                  background: dimgrey;
+                }
+              }
+            }
+
+            img{
+              height: 200px;
+              width: 100%;
+              border-radius: 12px;
+            }
+          }
+        }
+
+        &__TopBlock{
+          display: flex;
+          position: relative;
+
+          div:nth-child(even){
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+          }
+          &__description{
+            margin:0 10px;
+            textarea{
+
+              width: 100%;
+            }
+
+          }
+
+          &__name{
+            margin:0 10px;
+            input{
+              color: $colorGrean;
+            }
+          }
+
+          &__head{
+            margin:0 10px;
+            display: flex;
+            justify-content: space-between;
+
+            b{
+              cursor: pointer;
+            }
+
+            &__Two{
+              display: grid;
+              grid-gap: 10px;
+              grid-template-columns: 1fr 1fr;
+            }
+
+            &__One{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 10px;
+              input{
+                margin-left: 6px;
+                width: 50px;
+              }
+            }
+          }
+          img{
+            border: 2px solid $colorWhite;
+            border-radius: 12px;
+            width: 130px;
+            height: 180px;
+          }
+        }
+      }
+    }
+  }
 
   &__Four{
     border: 2px solid $colorWhite;

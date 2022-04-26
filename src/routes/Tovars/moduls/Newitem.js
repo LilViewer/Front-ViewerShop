@@ -12,7 +12,7 @@ import {Link} from "react-router-dom";
 
 const NewItem = ({data}) =>{
     const {stateData, dispatchData} = React.useContext(ContextData)
-    const token = document.cookie
+    const token = localStorage.getItem('token')
     const addBasket = async ()=>{
         // const response = await fetch(`${NET.APP_URL}/basket/add/${token}/${data.id}`)
         // console.log(response)

@@ -8,7 +8,7 @@ import NET from "../network";
 import Footer from "../routes/moduls/Navigation/Footer";
 const Buy = (props)=>{
     const propse = props.location.state
-    const token = document.cookie.split(';')[0]
+    const token = localStorage.getItem('token')
     const Buy = async () => {
         await fetch(`${NET.APP_URL}/buy`, {
             method: 'POST',

@@ -14,7 +14,7 @@ import profil from '../../../Content/image_site/Group 169.png'
 const Header = () =>{
 
     const {stateData, dispatchData} = React.useContext(ContextData)
-    const token = document.cookie
+    const token = localStorage.getItem('token')
     React.useEffect(() => {
         const fetchGenre = async () => {
 
@@ -152,7 +152,7 @@ const Header = () =>{
                 />
             </div>
             <div className={classes.menu}>
-                {!document.cookie || document.cookie.split('').length<10 ?
+                {!token || token.length<80 ?
                     <Link
                         to={{
                             pathname: `/Login`
@@ -201,6 +201,9 @@ const Header = () =>{
             </div>
             <div style={{visibility : theme}}  className={cn(classes.menu,classes.catalog)}>
                 <Catalog></Catalog>
+            </div>
+            <div className={classes.History}>
+                {console.log(history)}
             </div>
         </div>
     )

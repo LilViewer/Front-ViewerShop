@@ -164,6 +164,13 @@ const SliderTovars = () =>{
 
     return(
         <div className={classes.SliderBlock}>
+            <div className={classes.SliderBlock__buttonBlock}>
+                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__prev)} ref={btnPrev} onClick={prevHendler} />
+                <div className={classes.SliderBlock__lines}>
+                    <div className={classes.SliderBlock__line}></div>
+                </div>
+                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__next)} ref={btnNext} onClick={nextHendler}/>
+            </div>
             <div className={classes.SliderBlock__track} ref={slider}  >
                 {tovars.map((elem,index)=>{
                     return(
@@ -183,18 +190,10 @@ const SliderTovars = () =>{
                     )
                 })}
             </div>
-            <div >
-                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__prev)} ref={btnPrev} onClick={prevHendler} />
-                <div className={classes.SliderBlock__lines}>
-                    <div className={classes.SliderBlock__line}></div>
-                </div>
-                <button className={cn(classes.SliderBlock__button,classes.SliderBlock__button__next)} ref={btnNext} onClick={nextHendler}/>
-                <div className={classes.SliderBlock__shadow}></div>
-            </div>
             <div className={classes.SliderBlock__Navbar}>
-
                 <Navbar />
             </div>
+            <div className={classes.SliderBlock__shadow}></div>
         </div>
     )
 

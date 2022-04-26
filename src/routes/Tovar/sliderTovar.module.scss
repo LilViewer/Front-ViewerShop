@@ -2,11 +2,9 @@
 @import '../../style.module';
 
 .SliderBlock{
-  z-index: 20;
-  //height: 40%;
-  top: 25vh;
   position: absolute;
-  width: 30vw;
+  top: 16%;
+  z-index: 100;
   left: 120px;
 }
 

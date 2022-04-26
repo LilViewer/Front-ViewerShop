@@ -11,6 +11,7 @@ import FilterSwitch from "./FilterSwitch";
 
 
 const FilterMenuMod = ({selected,selecteds,setSelected,options}) =>{
+    console.log(selecteds)
     const {stateData, dispatchData} = React.useContext(ContextData)
 
     const [isActive, setIsActive] = useState(false);

@@ -29,9 +29,8 @@ const Login = () =>{
         }).then(function (response){
             response.json().then(function (resp){
                 if(resp['token'] && resp['token']!=''){
-                    document.cookie = resp['token']
+                    localStorage.setItem('token',resp['token'])
                     window.location.href = "/"
-
                 }
             })
         })
@@ -47,7 +46,7 @@ const Login = () =>{
         }).then(function (response){
             response.json().then(function (resp){
                 if(resp['token'] && resp['token']!=''){
-                    document.cookie = resp['token']
+                    localStorage.setItem('token',resp['token'])
                     window.location.href = "/"
                 }
 

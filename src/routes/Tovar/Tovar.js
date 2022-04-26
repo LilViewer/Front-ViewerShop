@@ -20,7 +20,7 @@ import Footer from "../moduls/Navigation/Footer";
 const Tovar = (props) =>{
     const Tovar=  props.location.state
     const [isReports,setIsReports] = useState()
-    const token = document.cookie.split(';')[0]
+    const token = localStorage.getItem('token')
     useEffect(()=>{
         const RepotTovar = async () => {
             await fetch(`${NET.APP_URL}/report/tovar`, {
@@ -50,8 +50,8 @@ const Tovar = (props) =>{
     return (
         <div className={classes.main}>
             <div className={classes.main__header}><Header /></div>
-                <SliderTovar NameTovar={Tovar[0].name}  />
-                <NabvarTovar TovarInfo={Tovar} />
+            <NabvarTovar TovarInfo={Tovar} />
+            <SliderTovar NameTovar={Tovar[0].name}  />
                 <div className={classesTwo.BlockTovar}>
                     <div className={classesTwo.BlockTovar__Trailer}>
                         <div className={classesTwo.Border}>
