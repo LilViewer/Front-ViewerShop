@@ -10,5 +10,6 @@
 
 **Back - [Laravel-api](https://github.com/LilViewer/Back-ViewerShop)**
 
----
+Для полного развертования проекта нужны обе части (упомянутые выше).
 
+---
