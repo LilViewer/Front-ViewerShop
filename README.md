@@ -18,7 +18,7 @@
 
 ## клонирование проекта
 
-` *git clone https://github.com/LilViewer/Front-ViewerShop.git* `
+` * git clone https://github.com/LilViewer/Front-ViewerShop.git * `
 
 ## изменение ссылки на BD
 
