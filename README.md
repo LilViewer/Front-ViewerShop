@@ -43,7 +43,18 @@ ADMIN_TOKEN отвечает за аккаует админа, для измен
 
 ## БД
 
-По пути ` diplomTwo/diplom.sql ` находится SQL БД, ипмортируйте в OpenServer
+По пути ` diplomTwo/diplom.sql ` находится SQL БД, ипмортируйте в BD под названием diplom.
+
+Если изменять название BD в файле ` .env `по пути ` diplomTwo/.env `  измените ` DB_DATABASE ` 
+
+```
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=diplom
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
 ## Запуск 
 
