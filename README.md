@@ -22,7 +22,7 @@
 
 ## изменение ссылки на BD
 
-` diplom/src/network.js `
+По пути ` diplom/src/network.js `
 
 ``` 
 const NET ={
@@ -31,7 +31,20 @@ const NET ={
     ADMIN_TOKEN: 'mYMGWohaWCQJ7ZcQT6u9geIlJndouSGlA5lamA4BOwskLeDqCsRLmFaZ4cKia8nkItJL0XtNeo3XdsmU'
 }
  ```
-изменение APP_URL и APP_SUP в случае изменение ссылки.
+изменить `APP_URL` и `APP_SUP` в случае другой ссылки ``` Back`a ```.
 
 ADMIN_TOKEN отвечает за аккаует админа, для изменения взять из БД токен пользователя который желаете сделать админом.
  
+# Back
+
+## клонирование проекта
+
+**` git clone https://github.com/LilViewer/Back-ViewerShop.git `**
+
+## БД
+
+По пути ` diplomTwo/diplom.sql ` находится SQL БД, ипмортируйте в OpenServer
+
+## Запуск 
+
+` php -S localhost:8000 -t public `
