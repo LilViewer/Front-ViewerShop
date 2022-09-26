@@ -45,7 +45,7 @@ ADMIN_TOKEN отвечает за аккаует админа, для измен
 
 По пути ` diplomTwo/diplom.sql ` находится SQL БД, ипмортируйте в BD под названием diplom.
 
-Если изменять название BD в файле ` .env `по пути ` diplomTwo/.env `  измените ` DB_DATABASE ` 
+Если изменять название BD в файле ` .env ` по пути ` diplomTwo/.env `  измените ` DB_DATABASE ` 
 
 ```
 DB_CONNECTION=mysql
