@@ -14,23 +14,23 @@
 
 ---
 
-#Front
+# Front
 
-##клонирование проекта
+## клонирование проекта
 
-`*git clone https://github.com/LilViewer/Front-ViewerShop.git*`
+` *git clone https://github.com/LilViewer/Front-ViewerShop.git* `
 
-##изменение ссылки на BD
+## изменение ссылки на BD
 
-`diplom/src/network.js`
+` diplom/src/network.js `
 
-`
+` 
 const NET ={
     APP_URL: 'http://localhost:8000/api',
     APP_SUP: 'http://localhost:8000/',
     ADMIN_TOKEN: 'mYMGWohaWCQJ7ZcQT6u9geIlJndouSGlA5lamA4BOwskLeDqCsRLmFaZ4cKia8nkItJL0XtNeo3XdsmU'
 }
-`
+ `
 изменение APP_URL и APP_SUP в случае изменение ссылки.
 
 ADMIN_TOKEN отвечает за аккаует админа, для изменения взять из БД токен пользователя который желаете сделать админом.
